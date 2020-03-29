@@ -6,9 +6,6 @@
             $(document).ready(function(){
             $('#userForm').submit(function(){
 
-            // show that something is loading
-            //$('#response').html("<b>Loading response...</b>");
-
             // Call ajax for pass data to other place
             $.ajax({
             type: 'POST',
@@ -18,14 +15,15 @@
             .done(function(data){ // if getting done then call.
             
             function randomColor() {
-            var c = "#";
-            for (var i = 0; i < 6; i++) {
+                let c = "#";
+                for (let i = 0; i < 6; i++) {
                 c += (Math.random() * 16 | 0).toString(16);
             } 
                 return c;
             }
-            var a = document.getElementById("response").style;
-            a.background = randomColor();
+
+                const a = document.getElementById("response").style;
+                a.background = randomColor();
             //a.css("background-color", a.color) = ;
             
             // show the response
@@ -47,17 +45,17 @@
         </script>
         <script>
             function randomColor() {
-            var c = "#";
-            for (var i = 0; i < 6; i++) {
+                let c = "#";
+                for (let i = 0; i < 6; i++) {
                 c += (Math.random() * 16 | 0).toString(16);
             } 
                 return c;
             }
 
-            var a = document.getElementById("response").style;
+            const a = document.getElementById("response").style;
             a.color = randomColor();
-            while (a.color == 000000) {
-                a.color == randomColor();
+            while (a.color === '000000') {
+                a.color === randomColor();
             }
         </script>
         <style>
@@ -117,7 +115,7 @@
     <body>
         <h2 class="centered margin-top-300 text-center">Iranian National Code Checker</h2>
         <h1 class="centered margin-top-270 text-center">And Generator</h1>
-        <h2 class="centered margin-top-240 text-center">Created in PascalCase</h2>
+        <h2 class="centered margin-top-240 text-center">Created By Hazhir Ahmadzadeh</h2>
         <form id="userForm"> 
             <input id="userInput" class="centered" type="text" name="userCode" placeholder="Enter your national code"/>
             <input id="submit" class="centered" type="submit" name="submit"/>
