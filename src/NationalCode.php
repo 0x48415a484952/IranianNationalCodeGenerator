@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace IranianNationalCode;
+
 class NationalCode
 {
     private array $invalidCodes = [
@@ -16,6 +18,11 @@ class NationalCode
         '9999999999',
         '0000000000'
     ];
+
+    public function __construct()
+    {
+        //nothing to do here
+    }
 
     private function invalidCode(string $userCode): bool
     {
@@ -86,10 +93,7 @@ class NationalCode
     {
         $result = '';
         for($i = 0; $i < $length; $i++) {
-            try {
-                $result .= random_int(0, 9);
-            } catch (Exception $e) {
-            }
+            $result .= random_int(0, 9);
         }
         return $result;
     }

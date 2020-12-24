@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-require('NationalCode.php');
+use IranianNationalCode\NationalCode;
+
+require_once "vendor/autoload.php";
 
 $code = filter_input(INPUT_POST, 'userCode', FILTER_SANITIZE_NUMBER_INT);
 $nationalCode = new NationalCode();

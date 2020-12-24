@@ -1,0 +1,25 @@
+{
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hazhir Ahmadzadeh",
+            "email": "ahmadzadehhazhir@gmail.com",
+            "role": "Programmer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.4",
+        "phpunit/phpunit": "^9.5",
+        "phpdocumentor/graphviz": "^1.0.4",
+        "ext-xdebug": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "IranianNationalCode\\": "src/",
+            "IranianNationalCode\\Test": "tests/"
+        }
+    }
+}
